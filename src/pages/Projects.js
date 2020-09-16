@@ -40,7 +40,21 @@ const Projects = () => {
       <div className="project">
         <h2><Link to="/site">This Website</Link></h2>
         <p>See the dedicated "<Link to="/site">About the Site</Link>" page for more info.</p>
-
+      </div>
+      <div className="project">
+        <h2>
+          <a href="https://github.com/uenot/oneline-hangman" target="_blank" rel="noopener noreferrer">
+            Oneline Hangman
+          </a>
+        </h2>
+        <p>
+          This short project is a simple command-line based game of Hangman. It was written in one (long) line of code
+          and served as an exercise in working with complex anonymous functions.
+        </p>
+        <p>
+          This line of code was written in Python, and has no major dependencies. If run on Windows, requires the
+          requests library to fetch a word bank.
+        </p>
       </div>
     </div>
   );

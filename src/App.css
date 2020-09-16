@@ -19,11 +19,22 @@ html, body {
   z-index: 1;
   top: 0;
   right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.header a {
+  font-size: 16px;
+  padding: 5px 0px;
 }
 
 .body {
   min-height: 100vh;
   width: 85%;
+  /*
+  WebStorm marks the linear-gradient as invalid for some reason— the following comment tells it to ignore the "error"
+  */
+  /*noinspection CssInvalidFunction*/
   background: linear-gradient(90deg, #141b41, 90%, #6f9ceb);
   text-align: center;
   margin-right: 18%;
@@ -60,6 +71,10 @@ html, body {
 
 .test {
   background-color: red;
+}
+
+.project {
+  padding-top: 10px;
 }
 
 .project-header {

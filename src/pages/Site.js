@@ -8,13 +8,14 @@ const Site = () => {
         This site was created with the goal of practicing web design.
       </p>
       <p>
-        The frontend was constructed through <a href="https://reactjs.org/">ReactJS</a> using functional components.
+        The frontend was constructed through <a href="https://reactjs.org/">ReactJS</a> and
+        the <code>create-react-app</code> tool.
       </p>
       <p>
         The <code>react-router-dom</code> package was used for reload-free pages.
       </p>
       <p>
-        Otherwise, all elements of the site were written in HTML/CSS.
+        GitHub's Pages service was used to host the site.
       </p>
       <p>
         Through this project, I learned about React and NodeJS and gained more experience with practical
@@ -22,7 +23,8 @@ const Site = () => {
       </p>
       <p>
         The source code for this website is
-        available <a href="https://github.com/uenot/personal-site">in this GitHub repo</a>.
+        available <a href="https://github.com/uenot/personal-site">in this GitHub repo</a>. The compiled/deployment
+        version is available <a href="https://github.com/uenot/uenot.github.io">here</a>.
       </p>
     </div>
   );
