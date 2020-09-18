@@ -7,8 +7,8 @@ const Projects = () => {
       <div className="project-header">
         <h1>Projects</h1>
         <p>
-          Listed here are my completed or in-progress projects. Check out the linked GitHub repos for the code
-          and more info on each project.
+          Listed here are my completed or in-progress projects, big and small. Check out the linked GitHub repos for
+          the code and more info on each project.
         </p>
       </div>
       <div className="project">

@@ -23,8 +23,9 @@ const Site = () => {
       </p>
       <p>
         The source code for this website is
-        available <a href="https://github.com/uenot/personal-site">in this GitHub repo</a>. The compiled/deployment
-        version is available <a href="https://github.com/uenot/uenot.github.io">here</a>.
+        available <a href="https://github.com/uenot/personal-site">in this GitHub repo</a>. The website is
+        hosted <a href="https://github.com/uenot/uenot.github.io">in a different repository</a> which uses an
+        optimized (and unreadable) version of the code.
       </p>
     </div>
   );
