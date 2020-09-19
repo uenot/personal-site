@@ -15,6 +15,10 @@ const Site = () => {
         The <code>react-router-dom</code> package was used for reload-free pages.
       </p>
       <p>
+        The site was originally constructed for desktop browsers. The mobile version was implemented through a
+        combination of dynamic component rendering and inline CSS styles.
+      </p>
+      <p>
         GitHub's Pages service was used to host the site.
       </p>
       <p>

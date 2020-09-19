@@ -25,6 +25,9 @@ const Home = ({windowDims}) => {
     homenavStyle = {
       flexDirection: 'column'
     };
+    homenavAnchorStyle = {
+      padding: '6px'
+    };
   }
 
   const homenavElements = homenavElementInfo.map(element => {

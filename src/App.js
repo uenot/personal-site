@@ -4,7 +4,8 @@ import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
 import Projects from "./pages/Projects";
 import Site from "./pages/Site";
-import SideBar from "./SideBar.js";
+import SideBar from "./navbars/SideBar.js";
+import BottomBar from "./navbars/BottomBar";
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 const App = () => {
@@ -29,12 +30,29 @@ const App = () => {
 
   useEffect(() => {
     updateDimensions();
+
     window.addEventListener("resize", updateDimensions);
 
     return () => {
       window.removeEventListener('resize', updateDimensions);
     }
   });
+
+  const bodyStyle = {};
+  let gradientOrientation = '90deg';
+
+  let navbar = <SideBar />
+
+  if (windowWidth < 700) {
+    gradientOrientation = '180deg';
+    bodyStyle['width'] = '100%';
+    bodyStyle['minHeight'] = '90vh';
+    bodyStyle['marginBottom'] = '10vh';
+    navbar = <BottomBar />
+  }
+
+  bodyStyle['background'] = `linear-gradient(${gradientOrientation}, #141b41, 90%, #6f9ceb);`
+  bodyStyle['background'] = 'linear-gradient(0deg, #6f9ceb, #141b41 10vh)'
 
   const pageInfo = [
     {'component': Home,
@@ -60,12 +78,12 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="app">
-        <div className="body">
+        <div className="body" style={bodyStyle}>
           <Switch>
             {pages}
           </Switch>
         </div>
-        <SideBar />
+        {navbar}
       </div>
     </BrowserRouter>
   );
