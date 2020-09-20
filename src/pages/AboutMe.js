@@ -1,4 +1,5 @@
 import React from 'react';
+import ExternalLink from "../components/ExternalLink";
 
 const AboutMe = () => {
   return (
@@ -19,8 +20,8 @@ const AboutMe = () => {
       <div>
         <h1>Contact</h1>
         <p>If you would like to reach out to me, feel free to do so at the following locations:</p>
-        <p>Email: <a href="mailto:tobyueno@gmail.com">tobyueno@gmail.com</a></p>
-        <p>Github: <a href="https://github.com/uenot/">uenot</a></p>
+        <p>Email: <ExternalLink href="mailto:tobyueno@gmail.com">tobyueno@gmail.com</ExternalLink></p>
+        <p>Github: <ExternalLink href="https://github.com/uenot/">uenot</ExternalLink></p>
       </div>
     </div>
   );

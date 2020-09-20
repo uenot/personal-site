@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import InternalLink from "../components/InternalLink";
 
 const Home = ({windowDims}) => {
 
@@ -31,10 +31,7 @@ const Home = ({windowDims}) => {
   }
 
   const homenavElements = homenavElementInfo.map(element => {
-    return <Link to={element.link}
-                 onClick={window.scrollTo(0, 0)}
-                 style={homenavAnchorStyle}>{element.text}
-    </Link>
+    return <InternalLink to={element.link} style={homenavAnchorStyle}>{element.text}</InternalLink>
   });
 
   return (

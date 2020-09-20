@@ -1,9 +1,9 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import Home from "../pages/Home";
 import AboutMe from "../pages/AboutMe";
 import Projects from "../pages/Projects";
 import Site from "../pages/Site";
+import InternalLink from "../components/InternalLink";
 
 const BottomBar = () => {
 
@@ -22,14 +22,9 @@ const BottomBar = () => {
       'text': 'About the Site'}
   ];
 
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  }
-
   const links = pageInfo.map(page => {
-    return <Link to={page.path}
-                 style={{width: 100 / pageInfo.length + '%', fontSize: 16}}
-                 onClick={scrollToTop}>{page.text}</Link>
+    return <InternalLink to={page.path}
+                         style={{width: 100 / pageInfo.length + '%', fontSize: 16}}>{page.text}</InternalLink>
   });
 
   return (
