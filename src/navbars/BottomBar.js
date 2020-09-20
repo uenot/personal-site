@@ -22,12 +22,18 @@ const BottomBar = () => {
       'text': 'About the Site'}
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  }
+
   const links = pageInfo.map(page => {
-    return <Link to={page.path} style={{width: 100 / pageInfo.length + '%', fontSize: 16}}>{page.text}</Link>
+    return <Link to={page.path}
+                 style={{width: 100 / pageInfo.length + '%', fontSize: 16}}
+                 onClick={scrollToTop}>{page.text}</Link>
   });
 
   return (
-    <div className="header bottom-header">
+    <div className="bottom-header">
       <div className="bottom-nav">
         {links}
       </div>

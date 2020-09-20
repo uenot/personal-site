@@ -39,20 +39,19 @@ const App = () => {
   });
 
   const bodyStyle = {};
-  let gradientOrientation = '90deg';
 
   let navbar = <SideBar />
 
-  if (windowWidth < 700) {
-    gradientOrientation = '180deg';
+  if (windowWidth < 850) {
+    bodyStyle['background'] = 'linear-gradient(0deg, #6f9ceb, #141b41 10vh)';
     bodyStyle['width'] = '100%';
     bodyStyle['minHeight'] = '90vh';
-    bodyStyle['marginBottom'] = '10vh';
-    navbar = <BottomBar />
+    navbar = <div>
+      <div style={{width: '100%', backgroundColor: '#6f9ceb', height: '10vh', zIndex: '-1'}}/>
+      <BottomBar />
+    </div>;
   }
 
-  bodyStyle['background'] = `linear-gradient(${gradientOrientation}, #141b41, 90%, #6f9ceb);`
-  bodyStyle['background'] = 'linear-gradient(0deg, #6f9ceb, #141b41 10vh)'
 
   const pageInfo = [
     {'component': Home,

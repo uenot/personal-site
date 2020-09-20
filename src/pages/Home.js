@@ -15,7 +15,7 @@ const Home = ({windowDims}) => {
   let homenavStyle = {};
   let homenavAnchorStyle = {};
 
-  if (windowDims[0] >= 700) {
+  if (windowDims[0] >= 850) {
     // normal size
     homenavAnchorStyle = {
       width: 100 / homenavElementInfo.length + "%"
@@ -31,12 +31,15 @@ const Home = ({windowDims}) => {
   }
 
   const homenavElements = homenavElementInfo.map(element => {
-    return <Link to={element.link} style={homenavAnchorStyle}>{element.text}</Link>
+    return <Link to={element.link}
+                 onClick={window.scrollTo(0, 0)}
+                 style={homenavAnchorStyle}>{element.text}
+    </Link>
   });
 
   return (
     <div className="home">
-      <h1 className="hometitle">{windowDims[0]} by {windowDims[1]}</h1>
+      <h1 className="hometitle">Toby Ueno</h1>
       <div className="homenav" style={homenavStyle}>
         {homenavElements}
       </div>
