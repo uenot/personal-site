@@ -1,4 +1,5 @@
 import React from 'react';
+import ExternalLink from "../components/ExternalLink";
 
 const Site = () => {
   return (
@@ -8,8 +9,7 @@ const Site = () => {
         This site was created with the goal of practicing web design.
       </p>
       <p>
-        The frontend was constructed through <a
-        href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">ReactJS</a> and
+        The frontend was constructed through <ExternalLink href="https://reactjs.org/">ReactJS</ExternalLink> and
         the <code>create-react-app</code> tool.
       </p>
       <p>
@@ -28,11 +28,9 @@ const Site = () => {
       </p>
       <p>
         The source code for this website is
-        available <a
-        href="https://github.com/uenot/personal-site" target="_blank" rel="noopener noreferrer">in this GitHub repo</a>.
-        The website is hosted <a
-        href="https://github.com/uenot/uenot.github.io" target="_blank" rel="noopener noreferrer">in a different
-        repository</a> which uses an optimized (and unreadable) version of the code.
+        available <ExternalLink href="https://github.com/uenot/personal-site">in this GitHub repo</ExternalLink>.
+        The website is hosted <ExternalLink href="https://github.com/uenot/uenot.github.io">in a different
+        repository</ExternalLink> which uses an optimized (and unreadable) version of the code.
       </p>
     </div>
   );
