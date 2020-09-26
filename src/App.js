@@ -69,7 +69,7 @@ const App = () => {
     ];
 
   const pages = pageInfo.map(page => {
-    return <Route exact={page.exact} path={page.path} render={props => React.createElement(
+    return <Route exact={page.exact} path={page.path} key={page.path} render={props => React.createElement(
       page.component, {...props, windowDims: windowDims}
     )} />
   });

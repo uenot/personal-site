@@ -28,7 +28,7 @@ const Projects = () => {
         <h2><ExternalLink href="https://github.com/uenot/nocturne-ts">NocturneTS</ExternalLink></h2>
         <p>
           NocturneTS is a full text-based recreation of the turn-based combat found in the 2003 video
-          game <ExternalLink href="https://en.wikipedia.org/wiki/Shin_Megami_Tensei_III:_Nocturne">Shin
+          game <ExternalLink redirect href="https://en.wikipedia.org/wiki/Shin_Megami_Tensei_III:_Nocturne">Shin
           Megami Tensei: Nocturne</ExternalLink>.
           The program features multiple game modes that involve user input and a fully-automated "experiment mode"
           that can simulate thousands of games with custom settings.

@@ -24,6 +24,7 @@ const BottomBar = () => {
 
   const links = pageInfo.map(page => {
     return <InternalLink to={page.path}
+                         key={page.path}
                          style={{width: 100 / pageInfo.length + '%', fontSize: 16}}>{page.text}</InternalLink>
   });
 
