@@ -1,16 +1,10 @@
 import React from 'react';
 import InternalLink from "../components/InternalLink";
+import pages from "../pages";
 
 const Home = ({windowDims}) => {
 
-  const homenavElementInfo = [
-    {'text': 'About Me',
-    'link': '/about'},
-    {'text': 'Projects',
-    'link': '/projects'},
-    {'text': 'About the Site',
-    'link': '/site'}
-  ];
+  const homenavElementInfo = pages.filter(item => item.component !== this);
 
   let homenavStyle = {};
   let homenavAnchorStyle = {};
@@ -31,7 +25,7 @@ const Home = ({windowDims}) => {
   }
 
   const homenavElements = homenavElementInfo.map(element => {
-    return <InternalLink to={element.link} style={homenavAnchorStyle}>{element.text}</InternalLink>
+    return <InternalLink to={element.path} style={homenavAnchorStyle}>{element.text}</InternalLink>
   });
 
   return (

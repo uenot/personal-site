@@ -1,15 +1,18 @@
 import React from 'react';
+import pages from "../pages";
 import InternalLink from "../components/InternalLink";
 
 const SideBar = () => {
+
+  const links = pages.map(page => {
+    return <InternalLink to={page.path} key={page.path}>{page.text}</InternalLink>
+  });
+
   return (
     <div className="header">
       <h2 className="center">Contents</h2>
       <ul className="ulnav">
-        <InternalLink to="/">Home</InternalLink>
-        <InternalLink to="/about">About Me</InternalLink>
-        <InternalLink to="/projects">Projects</InternalLink>
-        <InternalLink to="/site">About the Site</InternalLink>
+        {links}
       </ul>
     </div>
   );
